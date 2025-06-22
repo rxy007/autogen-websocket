@@ -4,7 +4,7 @@ import httpx
 from urllib.parse import urljoin
 from config import mcp_server_name, mcp_server_port, nws_api_base, user_agent
 
-mcp = FastMCP(name=mcp_server_name, port=mcp_server_port)
+mcp = FastMCP(name=mcp_server_name)
 
 async def make_nws_request(url: str) -> dict[str, Any] | None:
     """向 NWS API 发送请求，并进行适当的错误处理。"""
@@ -85,4 +85,5 @@ async def get_forecast(latitude: float, longitude: float) -> str:
 
 
 if __name__ == '__main__':
-    mcp.run(transport="sse")
+    mcp.run(transport="sse", port=mcp_server_port, host='0.0.0.0')
+    # mcp.run(transport="streamable-http", port=mcp_server_port, host='0.0.0.0')
