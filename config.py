@@ -7,7 +7,7 @@ agent_port = 8080
 
 model_name = "qwen-max-latest"
 model_base_url = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-model_api_key = "sk-5940ea469b564d659507938f39394086"
+model_api_key = ""
 
 model_info = {
 
