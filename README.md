@@ -17,3 +17,6 @@ autogen agent websocket
 ``python weather-mcp.py``
 ``python main.py``
 ``http://127.0.0.1:8080/``
+
+#使用agent_graph_flow/graph_flow
+``修复p->e、p->u、u->e，跳不到u的问题``
